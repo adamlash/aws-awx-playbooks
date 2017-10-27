@@ -1,2 +1,2 @@
 ---
-- import_playbook: testan.yml
+- import_playbook: jenkins.yml
