@@ -3,7 +3,7 @@
   tasks:
     - name: "set the instance ID for the play"
       shell: ec2metadata --instance-id
-        register: instance_id
+      register: instance_id
 
     - name: "Show Instance ID and other Facts Gathered"
       debug:
