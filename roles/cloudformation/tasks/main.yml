@@ -6,7 +6,7 @@
     disable_rollback: true
     template_url: "https://s3-us-west-2.amazonaws.com/adamlashhaws-cloudformation-templates/origin/master/ec2/ec2-standalone.yaml"
     template_parameters:
-      ParventVPCStack: "{{ cfn_parentvpc }}"
+      ParventVPCStack: al-vpc-services-1
       InstanceType: "{{ cfn_instancetype }}"
       AMIID: "{{ cfn_ami }}"
       Name: "{{ cfn_instancename }}"
