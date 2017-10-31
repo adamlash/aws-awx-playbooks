@@ -1,0 +1,21 @@
+- name: Launch Cloudformation Stack
+  cloudformation:
+    stack_name: "{{ cfn-stackname }}"
+    state: "present"
+    region: "us-west-2"
+    disable_rollback: true
+    template_url: "{{ cfn-url}}"
+    template_parameters:
+      ParventVPCStack: "{{ cfn-parentvpc }}"
+      InstanceType: "{{ cfn-instancetype }}"
+      AMIID: "{{ cfn-ami }}"
+      Name: "{{ cfn-instancename }}"
+      SubnetName: "{{ cfn-subnet }}"
+      KeyName: "{{ cfn-keyname }}"
+      SSHAccessGroup: "{{ cfn-sshaccessgroup }}"
+      SSHAccessCIDR: "{{ cfn-sshaccesscidr }}"
+      DataDisk: "{{ cfn-datadisk }}"
+      ParentAWXStack: "{{ cfn-awxstack }}"
+      AWXorSSM: "{{ cfn-ssmorawxmanage }}"
+    tags:
+      CreatedBy: "AWX Template - Standalone EC2 Instance Creation"
