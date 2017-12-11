@@ -1,3 +1,28 @@
+<<<<<<< HEAD
 - name: use EC2 Singular yml files
   import_tasks: ec2standalone.yml
   when: cfn_instancetype == 'ec2standalone'
+=======
+- name: Launch Cloudformation Stack
+  cloudformation:
+    stack_name: "{{ cfn_stackname }}"
+    state: "present"
+    region: "us-west-2"
+    disable_rollback: true
+    template_url: "https://s3-us-west-2.amazonaws.com/adamlashhaws-cloudformation-templates/origin/master/ec2/ec2-standalone.yaml"
+    template_parameters:
+      ParentVPCStack: "{{ cfn_parentvpc }}"
+      InstanceType: "{{ cfn_instancetype }}"
+      AMIID: "{{ cfn_ami }}"
+      Name: "{{ cfn_instancename }}"
+      SubnetName: "{{ cfn_subnet }}"
+      KeyName: "{{ cfn_keyname | default('') }}"
+      SSHAccessGroup: "{{ cfn_sshaccessgroup | default('') }}"
+      SSHAccessCIDR: "{{ cfn_sshaccesscidr | default('') }}"
+      DataDisk: "{{ cfn_datadisk | default('') }}"
+      ParentAWXStack: "{{ cfn_awxstack | default('') }}"
+      AWXorSSM: "{{ cfn_ssmorawxmanage }}"
+    tags:
+      CreatedBy: "AWX Template - Standalone EC2 Instance Creation"
+      Role: "{{ cfn_roletag }}"
+>>>>>>> parent of fdd7db6... adding a removal step to remove failed stacks
