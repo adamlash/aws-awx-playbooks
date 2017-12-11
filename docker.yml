@@ -2,4 +2,3 @@
 - hosts: tag_Role_DockerSwarm
   roles:
     - common
-    - docker
