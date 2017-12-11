@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 - name: use EC2 Singular yml files
   import_tasks: ec2standalone.yml
   when: cfn_instancetype == 'ec2standalone'
 =======
+=======
+>>>>>>> parent of fdd7db6... adding a removal step to remove failed stacks
 - name: Launch Cloudformation Stack
   cloudformation:
     stack_name: "{{ cfn_stackname }}"
