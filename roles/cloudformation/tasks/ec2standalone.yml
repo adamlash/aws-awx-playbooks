@@ -1,8 +1,8 @@
-#- name: Delete Failed CFN stack of the same name
-#  cloudformation:
-#    stack_name: "{{ cfn_stackname }}"
-#    state: "absent"
-#    region: "us-west-2"
+- name: Delete Failed CFN stack of the same name
+  cloudformation:
+    stack_name: "{{ cfn_stackname }}"
+    state: "absent"
+    region: "us-west-2"
 
 
 - name: Launch Cloudformation Stack
