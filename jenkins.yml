@@ -1,5 +1,5 @@
 ---
-- hosts:  tag_Role_Jenkins
+- hosts: tag_Role_Jenkins
   roles:
     - common
     - geerlingguy.java

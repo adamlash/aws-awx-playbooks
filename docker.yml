@@ -1,5 +1,5 @@
 ---
-- hosts:  tag_Role_DockerSwarm
+- hosts: tag_Role_DockerSwarm
   roles:
     - common
     - docker
