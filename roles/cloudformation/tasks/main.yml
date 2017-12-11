@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-- name: use EC2 Singular yml files
-  import_tasks: ec2standalone.yml
-  when: cfn_instancetype == 'ec2standalone'
-=======
-=======
->>>>>>> parent of fdd7db6... adding a removal step to remove failed stacks
+- name: Delete Failed CFN stack of the same name
+  cloudformation:
+    stack_name: "{{ cfn_stackname }}"
+    state: "absent"
+    region: "us-west-2"
+
+
 - name: Launch Cloudformation Stack
   cloudformation:
     stack_name: "{{ cfn_stackname }}"
@@ -28,4 +27,3 @@
     tags:
       CreatedBy: "AWX Template - Standalone EC2 Instance Creation"
       Role: "{{ cfn_roletag }}"
->>>>>>> parent of fdd7db6... adding a removal step to remove failed stacks
