@@ -6,5 +6,6 @@ jenkins_admin_password: admin123
 jenkins_plugins: [
   'git',
   'github',
-  's3'
+  's3',
+  'packer'
 ]
