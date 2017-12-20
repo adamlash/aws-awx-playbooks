@@ -1,7 +1,7 @@
 ---
 group_list:
   - name: "infra_admins"
-    admingroup: yes
+    admingroup: "yes"
 
 group_removal:
   - name: "removetest"
