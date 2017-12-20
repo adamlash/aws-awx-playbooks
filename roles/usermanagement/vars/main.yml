@@ -4,6 +4,7 @@ group_list:
     admingroup: "yes"
 
   - name: "developers"
+    admingroup: "no"
 
 group_removal:
   - name: "removetest"
