@@ -27,7 +27,7 @@
     name: "{{ item.username }}"
     state: "{{ item.state | default('present') }}"
     shell: "{{ item.shell | default('/bin/bash') }}"
-    group: "infra_admins"
+    group: "{{ item.group }}"
     remove: yes
   when: item.username is defined
   with_items:
