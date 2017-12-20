@@ -18,7 +18,7 @@
     regexp: "^%{{ item.name }}"
     line: "%{{ item.name }} ALL=(ALL) NOPASSWD: ALL"
     validate: visudo -cf %s
-  when: "{{ item.admingroup }}" == "yes"
+  when: item.admingroup == "yes"
   with_items:
     - "{{ group_list }}"
 
