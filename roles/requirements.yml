@@ -2,5 +2,3 @@
 # Jenkins Required Roles from Galaxy:
 - src: geerlingguy.jenkins
 - src: geerlingguy.java
-# Users and Groups Role:
-- src: sansible.users_and_groups
