@@ -3,6 +3,9 @@ group_list:
   - name: "infra_admins"
     admingroup: yes
 
+group_removal:
+  - name: "removetest"
+
 admin_list:
   - name: "Adam Lash"
     username: "adam.lash"
