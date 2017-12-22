@@ -2,3 +2,5 @@
 # Jenkins Required Roles from Galaxy:
 - src: geerlingguy.jenkins
 - src: geerlingguy.java
+# Nginx
+- src: jdauphant.nginx
