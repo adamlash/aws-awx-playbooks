@@ -5,6 +5,8 @@
   - name: Ensure directory structure exists
     file:
       path: /app
+      state: directory
+      mode: 0755
       owner: www-data
       group: www-data
 
