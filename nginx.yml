@@ -3,11 +3,12 @@
   roles:
     - jdauphant.nginx
 
-  nginx_sites:
-    awsdocumenter:
-      - listen 80
-      - server_name awsdocumenter.co.nz
-      - location / {
-        include proxy_params;
-        proxy_pass http://unix:/app/awsdocumenter/awsdocumenter.sock;
-        }
+  vars:
+    nginx_sites:
+      awsdocumenter:
+        - listen 80
+        - server_name awsdocumenter.co.nz
+        - location / {
+          include proxy_params;
+          proxy_pass http://unix:/app/awsdocumenter/awsdocumenter.sock;
+          }
