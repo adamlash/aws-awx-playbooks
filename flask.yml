@@ -1,0 +1,14 @@
+---
+- hosts: tag_Role_nginx
+
+  tasks:
+  - name: Ensure directory structure exists
+    file:
+      path: /app/awsdocumenter
+      owner: www-data
+      group: www-data
+
+  - name: Git clone Flask Directory
+    git:
+      repo: git@github.com:adamlash/aws-documenter.git
+      dest: /app/awsdocumenter

@@ -6,7 +6,18 @@ After=network.target
 User=www-data
 Group=www-data
 WorkingDirectory= {{ WorkingDirectory }}
-ExecStart=/home/sammy/myproject/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application
+ExecStart={{ WorkingDirectory }}/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
+
+
+
+      gunicorn -b 0.0.0.0:2000
+        --access-logfile -
+        --reload
+        "awsdocumenter.app:create_app()"
+
+      celery worker
+        -l info
+        -A awsdocumenter.blueprints.contact.tasks
