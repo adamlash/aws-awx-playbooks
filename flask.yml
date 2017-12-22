@@ -4,7 +4,7 @@
   tasks:
   - name: Ensure directory structure exists
     file:
-      path: /app/awsdocumenter
+      path: /app
       owner: www-data
       group: www-data
 
