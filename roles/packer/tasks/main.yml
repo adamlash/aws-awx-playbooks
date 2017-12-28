@@ -1,5 +1,4 @@
 - name: Check if Packer is Installed
-  template:
   stat: path=/usr/local/bin/packer
   register: packer_installed
 
@@ -13,3 +12,4 @@
   unarchive:
     src: /tmp/packer.zip
     dest: /user/local/bin
+  when: packer_installed.exists == False
