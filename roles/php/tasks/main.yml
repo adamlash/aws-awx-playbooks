@@ -1,0 +1,10 @@
+---
+- name: Update apt
+  apt: update_cache=yes
+
+- name: Install php packages
+  apt:
+    name: "{{ item }}"
+    state: installed
+    force: yes
+  with_items: php_dependencies

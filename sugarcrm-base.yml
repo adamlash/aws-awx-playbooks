@@ -1,0 +1,5 @@
+---
+- hosts: tag_Role_SugarCRM
+  roles:
+  - common
+  - apache2
