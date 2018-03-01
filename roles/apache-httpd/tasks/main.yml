@@ -1,4 +1,8 @@
 ---
+- name: add php5 repo
+  apt_repository:
+    repo: 'ppa:ondrej/apache2'
+
 - name: Update apt
   apt: update_cache=yes
 

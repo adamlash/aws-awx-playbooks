@@ -12,7 +12,7 @@
     state: installed
     force: yes
   with_items:
-    - php5
+    - php5.6
     - libapache2-mod-php5
     - php5-fpm
     - php5-curl
