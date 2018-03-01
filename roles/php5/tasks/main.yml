@@ -14,19 +14,19 @@
   with_items:
     - php5.6
     # - libapache2-mod-php5
-    - php5-fpm
-    - php5-curl
-    - php5-gd
+    - php-fpm
+    - php-curl
+    - php-gd
     - php-apc
     - php-pear
-    - php5-common
-    - php5-apcu
-    - php5-cli
-    - php5-dev
-    - php5-mysqlnd
-    - php5-readline
+    - php-common
+    - php-apcu
+    - php-cli
+    - php-dev
+    - php-mysqlnd
+    - php-readline
     - pkg-php-tools
-    - php5-imap
+    - php-imap
 
 - name: Check if JSMin is installed
   stat: path={{ php_jsmin_extension_location }}
