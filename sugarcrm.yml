@@ -1,0 +1,9 @@
+---
+- hosts: tag_Role_Sugar
+  roles:
+    - common
+    - apache-httpd
+    - php5
+    - geerlingguy.java
+    - f500.elasticsearch
+    - geerlingguy.memcached

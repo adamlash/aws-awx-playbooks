@@ -1,0 +1,14 @@
+---
+- name: Update apt
+  apt: update_cache=yes
+
+- name: Install required packages
+  apt: name={{ item }} state=present
+  with_items:
+    - apache2
+
+- name: Enabled mod_rewrite
+  apache2_module: name=rewrite state=present
+
+- name: Disable default configuration
+  file: dest=/etc/apache2/sites-enabled/000-default state=absent

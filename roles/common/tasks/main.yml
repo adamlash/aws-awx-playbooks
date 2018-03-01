@@ -15,3 +15,9 @@
   hosts: all
   timezone:
     name: "{{ timezone }}"
+
+- name: Install generic packages
+  apt: name={{ item }} state=present
+  with_items:
+    - git
+    - software-properties-common

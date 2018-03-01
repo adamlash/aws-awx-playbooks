@@ -1,0 +1,4 @@
+# f500.elasticsearch vars
+elasticsearch_state: present
+elasticsearch_cluster_name: sugarcrm
+elasticsearch_bootstrap_mlockall: true
