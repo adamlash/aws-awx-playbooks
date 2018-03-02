@@ -17,7 +17,7 @@
     - php-fpm
     - php-curl
     - php-gd
-    - php5-apc
+    # - php-apc
     - php-pear
     - php-common
     - php-apcu
