@@ -10,7 +10,7 @@
         dbuser: wpuser
         dbpass: 'Pass2018'
         dbhost: test-instance-backup.cgjam0ejjwqh.us-west-2.rds.amazonaws.com
-        path: /var/www
+        path: /var/www/qilinzhwp
         url: http://qilin.co.nz/zh/wp
         title: 'Qilin Wordpress'
         admin_name: admin
