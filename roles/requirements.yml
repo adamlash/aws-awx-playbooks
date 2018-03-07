@@ -8,3 +8,6 @@
 - src: geerlingguy.java
 - src: f500.elasticsearch
 - src: geerlingguy.memcached
+# Wordpress Required Roles
+- src: tersmitten.wordpress
+- src: geerlingguy.php

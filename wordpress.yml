@@ -1,0 +1,24 @@
+- hosts: tag_Role_Wordpress
+  roles:
+  - apache-httpd
+  - geerlingguy.php
+  - tersmitten.wordpress
+  vars:
+    wordpress_installs:
+      - name: qilinwp
+        dbname: wordpress
+        dbuser: wpuser
+        dbpass: 'Pass2018'
+        dbhost: test-instance-backup.cgjam0ejjwqh.us-west-2.rds.amazonaws.com
+        path: /var/www
+        url: http://qilin.co.nz/zh/wp
+        title: 'Qilin Wordpress'
+        admin_name: admin
+        admin_email: root@localhost.localdomain
+        admin_password: 'Pass2018'
+        themes:
+          - name: twentyfifteen
+            activate: true
+        users: {}
+        options: []
+        queries: []
