@@ -19,6 +19,7 @@
         themes:
           - name: twentyfifteen
             activate: true
+        plugins: []
         users: {}
         options: []
         queries: []
