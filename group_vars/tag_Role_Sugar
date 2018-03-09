@@ -21,7 +21,7 @@ php_packages:
   - php-gd
   #- php-hash
   - php-imap
-  - php-JSMin
+  #- php-JSMin
   - php-json
   - php-mbstring
   - php-mcrypt
