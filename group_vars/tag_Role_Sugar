@@ -1,3 +1,35 @@
+# php vars
+php_use_managed_ini: true
+php_display_errors: "0"
+# fastcgi.logging: 0
+php_max_execution_time: "120"
+php_max_input_time: "120"
+# mbstring.func_overload: 0
+php_memory_limit: "512MB"
+php_post_max_size: "100M"
+php_session_use_cookies: "1"
+php_session_cookie_httponly: "1"
+php_session_cookie_lifetime: "0"
+php_session_gc_maxlifetime: "1440"
+php_session_save_handler: "memcached"
+php_session_use_trans_sid: "0"
+php_upload_max_filesize: "256M"
+php_packages:
+  - php
+  - php-bcmath
+  - php-curl
+  - php-gd
+  - php-hash
+  - php-imap
+  - php-JSMin
+  - php-json
+  - php-mbstring
+  - php-mcrypt
+  - php-openssl
+  - php-SimpleXML
+  - php-zip
+  - php-zlib
+
 # f500.elasticsearch vars
 elasticsearch_state: present
 elasticsearch_cluster_name: sugarcrm
