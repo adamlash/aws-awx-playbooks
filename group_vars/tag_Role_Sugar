@@ -19,7 +19,7 @@ php_packages:
   - php-bcmath
   - php-curl
   - php-gd
-  - php-hash
+  #- php-hash
   - php-imap
   - php-JSMin
   - php-json
