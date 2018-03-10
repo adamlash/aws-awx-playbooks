@@ -28,7 +28,7 @@ php_packages:
   #- php-openssl
   #- php-SimpleXML
   - php-zip
-  - php-zlib
+  #- php-zlib
 
 # f500.elasticsearch vars
 elasticsearch_state: present
