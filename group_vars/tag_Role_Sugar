@@ -25,7 +25,7 @@ php_packages:
   - php-json
   - php-mbstring
   - php-mcrypt
-  - php-openssl
+  #- php-openssl
   - php-SimpleXML
   - php-zip
   - php-zlib
