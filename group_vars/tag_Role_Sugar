@@ -26,7 +26,7 @@ php_packages:
   - php-mbstring
   - php-mcrypt
   #- php-openssl
-  - php-SimpleXML
+  #- php-SimpleXML
   - php-zip
   - php-zlib
 
